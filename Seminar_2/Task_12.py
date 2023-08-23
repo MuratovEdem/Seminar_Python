@@ -13,7 +13,9 @@ def quessed_number(x, y):
 
 
 
-amount_x = int(input('Введите сумму загаданных чисел: ')) #86
-multiplication_y = int(input('Введите произведение загаданных чисел: ')) # 1728
-
-quessed_number(amount_x, multiplication_y)
+try:
+    amount_x = int(input('Введите сумму загаданных чисел: ')) #86
+    multiplication_y = int(input('Введите произведение загаданных чисел: ')) # 1728
+    quessed_number(amount_x, multiplication_y)
+except:
+    print('Введено некорректное значение')
