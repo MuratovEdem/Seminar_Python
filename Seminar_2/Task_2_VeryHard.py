@@ -34,8 +34,9 @@ def search_sequence(list):
         else:
             temp_list.clear()
             count_temp_list = 0
-    
-    return max_sequence_list
+    print(f'Максимальная последовательность: {max_sequence_list}')
+    result = (max_sequence_list[0], max_sequence_list[len(max_sequence_list) - 1])
+    return result
 
 
 
