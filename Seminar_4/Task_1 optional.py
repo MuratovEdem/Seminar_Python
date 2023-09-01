@@ -10,37 +10,37 @@ import random
 def compose_polynomial(k: int) -> str:
     number_list = [random.randint(-10, 10) for _ in range(k + 1)]
     polynomial = ""
-    for i, coefficient in enumerate(number_list):
-        if coefficient == 0:
+    for i, number in enumerate(number_list):
+        if number == 0:
             continue
         degree = k - i
         if degree == 0:
-            if coefficient > 0:
-                polynomial += f" + {coefficient}"
+            if number > 0:
+                polynomial += f" + {number}"
             else:
-                polynomial += f" - {abs(coefficient)}"
+                polynomial += f" - {abs(number)}"
         elif degree == 1:
-            if coefficient > 0:
-                if coefficient == 1:
+            if number > 0:
+                if number == 1:
                     polynomial += f" + x"
                 else:
-                    polynomial += f" + {coefficient}x"
+                    polynomial += f" + {number}x"
             else:
-                if coefficient == -1:
+                if number == -1:
                     polynomial += f" - x"
                 else:
-                    polynomial += f" - {abs(coefficient)}x"
+                    polynomial += f" - {abs(number)}x"
         else:
-            if coefficient > 0:
-                if coefficient == 1:
+            if number > 0:
+                if number == 1:
                     polynomial += f" + x^{degree}"
                 else:
-                    polynomial += f" + {coefficient}x^{degree}"
+                    polynomial += f" + {number}x^{degree}"
             else:
-                if coefficient == -1:
+                if number == -1:
                     polynomial += f" - x^{degree}"
                 else:
-                    polynomial += f" - {abs(coefficient)}x^{degree}"
+                    polynomial += f" - {abs(number)}x^{degree}"
     if polynomial.startswith(" + "):
         polynomial = polynomial[3:]
     else:
