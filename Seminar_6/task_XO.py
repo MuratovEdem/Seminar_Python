@@ -9,11 +9,11 @@ import random
 def print_table(list_empty, list_user, list_comp):
     result_table = '\n'
     for i in range(len(list_empty)):
-        result_table += print_string(list_empty[i], list_user[i], list_comp[i]) + '\n'
+        result_table += print_string(list_empty[i], list_user[i]) + '\n'
     print(result_table)
 
 
-def print_string(empty, user, comp):
+def print_string(empty, user):
     string_res = '|'
     for i in range(1,4):
         if str(i) in empty:
