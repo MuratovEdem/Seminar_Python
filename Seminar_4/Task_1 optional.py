@@ -9,6 +9,7 @@ import random
 
 def compose_polynomial(k: int) -> str:
     number_list = [random.randint(-10, 10) for _ in range(k + 1)]
+    print(number_list)
     polynomial = ""
     for i, number in enumerate(number_list):
         if number == 0:
