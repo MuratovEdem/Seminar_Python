@@ -5,13 +5,11 @@
 # При ходе пользователя у надо спрашивать номер строки и столбца, куда он хочет сделать ход
 import random
 
-
 def print_table(list_empty, list_user, list_comp):
     result_table = '\n'
     for i in range(len(list_empty)):
         result_table += print_string(list_empty[i], list_user[i]) + '\n'
     print(result_table)
-
 
 def print_string(empty, user):
     string_res = '|'
@@ -23,7 +21,6 @@ def print_string(empty, user):
         else:
             string_res += '0|'
     return string_res
-
 
 def check_for_victory(list_player_move):
     for i in list_player_move:
@@ -39,7 +36,6 @@ def check_for_victory(list_player_move):
         return True
     return False
 
-
 def comp_motion(list_empty: list):
     while True:
         comp_str = random.randint(1,3)
@@ -51,11 +47,9 @@ def comp_motion(list_empty: list):
 
 
 
-
 list_empty_cells = [['1', '2', '3'], ['1', '2', '3'], ['1', '2', '3']]
 list_user_motion = [[], [], []]
 list_comp_motion = [[], [], []]
-
 
 try:
     for i in range(4):

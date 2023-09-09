@@ -4,11 +4,12 @@
 # 33
 # 200
 # Ответ: [2, 3]
+
 from random import randint
 
 def get_index_number(min_number: int, max_number: int) -> list:
     print(list_numbers := [randint(1,300) for _ in range(10)])
-    print([list_numbers.index(x) for x in list_numbers if min_element < x < max_element])
+    print([list_numbers.index(x) for x in list_numbers if min_number < x < max_number])
 
 
 min_element = 33
